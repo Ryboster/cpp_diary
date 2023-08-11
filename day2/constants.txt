@@ -1,0 +1,25 @@
+﻿C++ supports two types of constant, immutable variables:
+
+    • const: is a type of constant defined once and kept that way for ever. Neither code nor user can alter that variable during runtime. It is used in simple cases to pass values to functions without fear of it being modified
+    • Constexpr: is a type of constant whose value is evaluated at compile time. It is used when the value of a constant is not known to the programmer before compile time.
+
+Example:	
+
+	const int dmv = 17;		// dmv is a named constant
+
+	int var = 17;		// var is not a constant
+
+	constexpr double max1 = 1.4∗square(dmv);		// OK if square(17) is a 										constant expression
+	constexpr double max2 = 1.4∗square(var);		// error : var is not a 										constant expression
+	const double max3 = 1.4∗square(var);		// OK, may be evaluated at 												run time
+	
+For a function to be usable in a constant expression, that is, in an expression that will be evaluated by the compiler, it must be defined with constexpr. For example:
+		constexpr double square(double x) { return x∗x; }
+
+
+
+To be constexpr, a function must be rather simple: just a return-statement computing a value. constexpr can be used for non-constant expressions, but when that is done the result is not a constant expression. We allow a constexpr function to be called with non-constant-expression arguments in contexts that do not require constant expressions, so that we don’t have to define essentially the same function twice: once for constant expressions and once for variables.
+
+
+
+
