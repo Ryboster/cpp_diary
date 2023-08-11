@@ -1,0 +1,49 @@
+﻿Every name and every expression has a type that determines the operations that may be performed
+on it. Each fundamental type corresponds directly to hardware facilities and has a fixed size that determines the range of values that can be stored in it:
+
+	bool = 1 Byte
+	char = 1 Byte
+	int = 4 Bytes
+	double = 8 Bytes
+	…
+
+The size of a type is implementation-defined (i.e., it can vary among different machines) and can be obtained by the sizeof operator; for example:
+
+	 sizeof(char) equals 1 and sizeof(int) is often 4.
+
+The arithmetic operators can be used for appropriate combinations of these types:
+	x+y		// plus
+	+x		// unary plus
+	x−y		// minus
+	−x		// unary minus
+	x∗y		// multiply
+	x/y		// divide
+	x%y		// remainder (modulus) for integers
+
+So can the comparison operators:
+	x==y		// equal
+	x!=y		// not equal
+	x<y		// less than
+	x>y		// greater than
+	x<=y		// less than or equal
+	x>=y		// greater than or equal
+
+When defining a variable, you don’t actually need to state its type explicitly when it can be
+deduced from the initializer:
+	auto b = true;		// a bool
+	auto ch = 'x';		// a char
+	auto i = 123;		// an int
+	auto d = 1.2;		// a double
+	auto z = sqrt(y);	// z has the type of whatever sqr t(y) returns
+
+In addition to the conventional arithmetic and logical operators (§10.3), C++ offers more spe-
+cific operations for modifying a variable:
+
+	x+=y		// x = x+y
+	++x		// increment: x = x+1
+	x−=y		// x = x-y
+	−−x		// decrement: x = x-1
+	x∗=y		// scaling: x = x*y
+	x/=y		// scaling: x = x/y
+	x%=y		// x = x%y (modulus)
+
