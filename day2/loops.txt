@@ -1,0 +1,27 @@
+﻿C++ provides three different types of loop: for-loop, while-loop, and do-while-loop.
+
+For Loop:
+
+			for(initialization; condition; increment/decrement){
+				// body of the loop
+			}
+
+initialization portion of the loop lets you initialize the control variables to control the loop. Then condition is a boolean argument which must be true for the loop to run. And lastly the increment lets you control the control variable, e.g. for(f = 0; f<10; ++f)
+
+While loop:
+
+			while(condition){
+				// body of the loop
+			}
+
+while-loop is the simplest type of loop. It runs as long as the condition returns true
+
+Do-While loop:
+
+			do{
+				// body of the loop
+			}while(condition);
+
+do-while loop is a reversed type of while-loop. Whereas while-loop needs its condition to be true to begin and run, do-while always runs once, and then checks the condition to determine whether it should keep running or finish.
+
+
