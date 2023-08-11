@@ -1,0 +1,26 @@
+﻿Every C++ program must have exactly one global function named main(). The program starts by executing that function and returns its value to the system.
+	
+	int main(){ … }
+
+Main() does not have to have the return type of int, however it’s a widely accepted convention to always return a 0 (successful completion number) at the end of the function. If no value is returned, the system will receive a value indicating a successful completion. Non-zero values indicate failure.
+
+Printing:
+To print a string out to the shell in C++, you need to access std class’ property “cout”. Std can be imported to your script the following way:
+
+	#include<iostream>
+
+Then to print something, access the function the following way:
+	
+	std::cout << “Hello World”;
+
+Note that iostream needs to be imported in order for the program to be able to print anything. 
+
+For improved readability, the above example can be simplified in a way that omits mentioning of “std” every time you want to print something. To do so, you need to import std’s properties like so:
+	
+	using namespace std;
+
+Once that line’s in, the printing can be simplified:
+
+	cout << “Hello world”;
+
+
