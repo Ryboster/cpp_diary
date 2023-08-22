@@ -24,7 +24,7 @@ bool accept2(){
     char x = 0;
     while(x!='y'){
         cout<<"Transfer over savings?\n";
-        cin >> x;
+        cin >> x;   
         switch(x){
             case 'y':
                 cout<<"Very good\n";
